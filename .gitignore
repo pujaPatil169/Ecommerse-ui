@@ -6,21 +6,41 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+firebase-debug.log
 
 # Environment variables
+.env*
+!.env.example
+!.env.sample
 .env
 .env.local
 .env.development
 .env.production
 .env.test
-
 # Dependency directories
 node_modules/
+/.pnp
+.pnp.js
 
 # Build directories
 dist/
 dist-ssr/
 build/
+out/
+.next/
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# Secret files
+service-account.json
+*.key
+*.pem
+*.cert
+*-credentials.json
+config/secret*.json
+src/firebase/firebaseConfig.js
 
 # Local development files
 *.local
@@ -39,4 +59,15 @@ build/
 # System Files
 .DS_Store
 Thumbs.db
-.env
+
+# Testing
+coverage/
+.nyc_output/
+
+# Production
+.cache/
+.serverless/
+
+# Debug
+debug.log
+*.log.*
