@@ -9,11 +9,20 @@
 //     strictPort: true
 //   }
 // });
+// vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import ghPages from 'vite-plugin-gh-pages';
 
 export default defineConfig({
-  plugins: [react(), ghPages()],
-  base: '/your-repo-name/', // must match GitHub repo name
+  plugins: [react()],
+  base: '/Ecommerse-ui/', 
 });
+
+// import { defineConfig } from 'vite';
+// import react from '@vitejs/plugin-react';
+// import ghPages from 'vite-plugin-gh-pages';
+
+// export default defineConfig({
+//   plugins: [react(), ghPages()],
+//   base: '/Ecommerse-ui/',
+// });
