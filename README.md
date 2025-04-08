@@ -2,11 +2,25 @@
 
 ## Deployment to GitHub Pages
 
-1. Ensure all changes are committed and pushed to GitHub
-2. Run the deployment script (this automatically builds the app first):
+1. Commit your changes to main branch:
+```bash
+git add .
+git commit -m "Prepare for deployment"
+git push origin main
+```
+
+2. Run the deployment script (this builds and creates gh-pages branch):
 ```bash
 npm run deploy
 ```
+
+3. For first deployment, force push gh-pages branch:
+```bash
+git push --set-upstream origin gh-pages --force
+```
+
+Note: Force push is only needed for the first deployment to establish the branch.
+Subsequent deployments can use regular push.
 
 This will:
 - First build the production version (equivalent to `npm run build`)
