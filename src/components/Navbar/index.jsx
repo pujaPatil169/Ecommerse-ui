@@ -61,12 +61,12 @@ const Navbar = () => {
 
   const handleCategoryChange = (event, newValue) => {
     setSelectedCategory(newValue);
-    navigate(`/?category=${newValue}`);
+    navigate(`/Ecommerse-ui/?category=${newValue}`);
   };
 
   const executeSearch = () => {
     if (searchTerm.trim()) {
-      navigate(`/?search=${searchTerm.trim()}`);
+      navigate(`/Ecommerse-ui/?search=${searchTerm.trim()}`);
     }
   };
 
@@ -111,16 +111,16 @@ const Navbar = () => {
           </ListItem>
         ))}
 
-        <ListItem button component={Link} to="/cart" onClick={toggleDrawer(false)}>
+        <ListItem button component={Link} to="/Ecommerse-ui/cart" onClick={toggleDrawer(false)}>
           <ListItemText primary="Cart" />
         </ListItem>
 
         {user ? (
           <ListItem button onClick={() => { handleLogout(); setDrawerOpen(false); }}>
-            <ListItemText primary="Logout" />
+            <ListItemText primary="/Ecommerse-ui/Logout" />
           </ListItem>
         ) : (
-          <ListItem button component={Link} to="/login" onClick={toggleDrawer(false)}>
+          <ListItem button component={Link} to="/Ecommerse-ui/login" onClick={toggleDrawer(false)}>
             <ListItemText primary="Login" />
           </ListItem>
         )}
@@ -131,7 +131,7 @@ const Navbar = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6" component={Link} to="/" sx={{ textDecoration: 'none', color: 'inherit', mr: 2 }}>
+        <Typography variant="h6" component={Link} to="/Ecommerse-ui" sx={{ textDecoration: 'none', color: 'inherit', mr: 2 }}>
           E-Commerce Store
         </Typography>
 
@@ -160,7 +160,7 @@ const Navbar = () => {
             }}
           />
           
-          <IconButton color="inherit" component={Link} to="/cart">
+          <IconButton color="inherit" component={Link} to="/Ecommerse-ui/cart">
             <Badge badgeContent={cartItemCount} color="secondary">
               <ShoppingCartIcon />
             </Badge>
@@ -176,7 +176,7 @@ const Navbar = () => {
               </Button>
             </Box>
           ) : (
-            <Button color="white" component={Link} to="/login" sx={{ display: { xs: 'none', md: 'block' } }}>
+            <Button color="white" component={Link} to="/Ecommerse-ui/login" sx={{ display: { xs: 'none', md: 'block' } }}>
               Login
             </Button>
           )}

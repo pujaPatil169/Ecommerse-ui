@@ -41,7 +41,7 @@ const ProductCard = ({ product }) => {
       image: product.images[0],
       quantity: 1
     }));
-    navigate('/cart');
+    navigate('/Ecommerse-ui/cart');
   };
 
   const handleCloseAlert = () => {
@@ -62,7 +62,7 @@ const ProductCard = ({ product }) => {
         onClose={() => setOpenCheckout(false)}
         onCheckout={() => {
           // Handle checkout logic
-          navigate('/checkout');
+          navigate('/Ecommerse-ui/checkout');
 
         }}
         product={{...product, quantity: currentItem.quantity}}
@@ -108,7 +108,7 @@ const ProductCard = ({ product }) => {
           </div>
         </Alert>
       </Snackbar>
-      <Link to={`/products/${product.id}`} className={styles.card}>
+      <Link to={`/Ecommerse-ui/products/${product.id}`} className={styles.card}>
         <IconButton 
           onClick={handleQuickAdd}
           sx={{

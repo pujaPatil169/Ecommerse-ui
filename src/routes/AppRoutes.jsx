@@ -12,7 +12,7 @@ import ProtectedRoute from '../components/ProtectedRoute';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/Ecommerse-ui/',
     element: <MainLayout />,
     children: [
       { index: true, element: <HomePage /> },
